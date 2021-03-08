@@ -1,0 +1,156 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,500;0,600;0,700;1,300;1,500;1,600;1,700&family=Mulish:ital,wght@0,200;0,300;0,400;1,200;1,300;1,400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;1,100;1,200;1,300&display=swap");
+
+body {
+  background: black;
+  overflow: hidden;
+}
+
+h1 {
+  font-weight: bolder;
+  font-size: 50px;
+}
+
+p {
+  font-weight: 30;
+  font-size: 20px;
+}
+
+.container {
+  z-index: 10000;
+  text-align: center;
+  margin-top: 20%;
+  font-size: 25px;
+  color: rgb(250, 250, 250);
+  font-family: "Poppins" sans-serif;
+}
+
+.btn {
+  text-decoration: none;
+  background: rgb(22, 22, 22);
+  padding: 0.9rem;
+  border-radius: 0.3rem;
+  color: rgb(255, 255, 255);
+  font-size: 18px;
+  opacity: 0.8;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  opacity: 1;
+  box-shadow: 2px 2px 0 0 rgb(253, 151, 17);
+  background: orange;
+  color: rgb(22, 22, 22);
+}
+
+section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: #111;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border: none;
+}
+
+section .row {
+  position: relative;
+  top: -110%;
+  width: 100%;
+  display: flex;
+  padding: 10px 0;
+  white-space: nowrap;
+  font-size: 64px;
+  transform: rotate(-30deg);
+}
+
+i {
+  color: rgba(0, 0, 0, 0.5);
+  transition: 1s;
+  padding: 0 5px;
+  user-select: none;
+  cursor: default;
+}
+
+i:hover {
+  transition: 0s;
+  color: orange;
+  text-shadow: 0 0 120px orange;
+}
+
+section .row div {
+  animation: animate1 80s linear infinite;
+  animation-delay: -80s;
+}
+
+section .row div:nth-child(2) {
+  animation: animate2 80s linear infinite;
+  animation-delay: -40s;
+}
+
+@keyframes animate1 {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes animate2 {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-200%);
+  }
+}
+
+section .row div {
+  animation: animate1 80s linear infinite;
+  animation-delay: -80s;
+}
+
+section .row div:nth-child(2) {
+  animation: animate2 80s linear infinite;
+  animation-delay: -40s;
+}
+
+section .row:nth-child(even) div {
+  animation: animate3 80s linear infinite;
+  animation-delay: -80s;
+}
+
+section .row:nth-child(even) div:nth-child(2) {
+  animation: animate4 80s linear infinite;
+  animation-delay: -40s;
+}
+
+@keyframes animate3 {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes animate4 {
+  0% {
+    transform: translateX(-200%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+section .row div {
+  animation: animate1 80s linear infinite;
+  animation-delay: -80s;
+}
+
+section .row div:nth-child(2) {
+  animation: animate2 80s linear infinite;
+  animation-delay: -40s;
+}

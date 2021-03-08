@@ -1,0 +1,24 @@
+doctype
+html(lang='en')
+  head
+    include ../includes/header.pug
+    link(rel='shortcut icon', href='/img/Logo.png')
+    
+    script(src='/js/sidebar.js', defer)
+    link(rel='stylesheet', href='/css/sidebar.css')
+  body
+    include ../includes/sidebar.pug
+
+    #sidebarExtension.bg-test
+      header.text-center.pt-4
+        .large-icon.bg-white.round
+          img.round(src=user.avatarUrl(128), alt=user.username)
+        h4.pt-2 #{user.username}
+          span.text-muted #{'#' + user.discriminator.toString().padStart(4, '0')}
+
+    include ../includes/navbar.pug
+
+    .container.jumbotron.text-center.bg-transparent
+      h1.title 🦊Zafriel Dashboard
+      hr
+      p.desc Configure os servidores em que o Zafriel está por aqui, de uma maneira fácil e rápido para economizar seu tempo e deixar seu servidor 100% configurado.

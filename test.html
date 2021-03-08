@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Site Oficial do Bot Zafriel" />
+    <meta name="author" content="zSpl1nterUS_#6455" />
+    <meta name="keywords" content="Discord Bot, Zafriel" />
+    <meta
+      property="og:image"
+      content="https://cdn.discordapp.com/attachments/751976776607203408/811784168811921448/Zafriel_Logo.png"
+    />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;0,700;1,100;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+      crossorigin="anonymous"
+    />
+
+    <!-- CSS import -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./dashboard/assets/css/commands_page.css"
+    />
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="./dashboard/assets/img/Logo.png" />
+    <title>Comandos • Zafriel</title>
+
+    <script
+      src="https://kit.fontawesome.com/a076d05399.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <div id="progressBar"></div>
+    <div id="scrollPath"></div>
+
+    <div class="container">
+      <header>
+        <nav>
+          <input type="checkbox" id="check" />
+          <label for="check" class="checkbtn">
+            <i class="fas fa-bars"></i>
+          </label>
+          <a href="./index.html" class="logo">
+            <img
+              src="./dashboard/assets/img/Zafriel_Logo.png"
+              id="avatar"
+              alt="avatar"
+            /><strong id="text_logo">🦊 Zafriel 🐾</strong>
+          </a>
+
+          <ul>
+            <li><a href="./index.html" id="">Home</a></li>
+
+            <li><a class="active" href="./commands.html" id="">Comandos</a></li>
+
+            <li><a href="https://discord.gg/zX8Fq4V" id="">Suporte</a></li>
+
+            <li>
+              <a
+                href="https://discord.com/oauth2/authorize?client_id=601847636546289664&permissions=20887631278&scope=bot"
+                id=""
+                >Meu Convite</a
+              >
+            </li>
+
+            <li>
+              <a href="https://zuraaa.com/bots/601847636546289664/" id=""
+                >Vote</a
+              >
+            </li>
+
+            <li><a href="#" id="">Sobre</a></li>
+          </ul>
+        </nav>
+
+        <div class="img-wrapper">
+          <img src="./dashboard/assets/img/Zafriel_WPP.png" alt="" />
+        </div>
+
+        <div class="banner">
+          <h1>
+            Nesta página<br />
+            você irá encontrar<br />
+            a lista dos meus comandos
+          </h1>
+          <p>Zafriel</p>
+          <a href="#commands"><button>Lista</button></a>
+        </div>
+      </header>
+
+      <section class="list-commands" id="commands">
+        <div class="session-header">
+          <h1>Comandos</h1>
+        </div>
+        <div class="cmd-info">
+          <p>
+            Os comandos são separados por categoria, assim fica mais fácil para
+            saber aonde encontar algum comando, segue a mesma forma do comando
+            de help do Bot.
+          </p>
+        </div>
+        <div class="cmds-header">
+          <h1>Bot</h1>
+        </div>
+        <div class="cmds">
+          <table class="table-data">
+            <thead>
+              <tr>
+                <th>Comando</th>
+                <th>Descrição</th>
+                <th>Aliases</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>blacklistt</td>
+                <td>Comando que mostra os usuários na BlackList do Bot</td>
+                <td>Nenhuma</td>
+              </tr>
+              <tr>
+                <td>botinfo</td>
+                <td>Comando para saber as informações do Bot</td>
+                <td>b-info</td>
+              </tr>
+              <tr>
+                <td>bugreport</td>
+                <td>Encontrou um Bug? Reporte ele ao meu desenvolvedor.</td>
+                <td>reportbug - bug</td>
+              </tr>
+              <tr>
+                <td>cmdUsages</td>
+                <td>Veja as pessoas que mais usaram comando no Bot.</td>
+                <td>cmdU - usages</td>
+              </tr>
+              <tr>
+                <td>cpu</td>
+                <td>Veja as informações sobre minha CPU.</td>
+                <td>Nenhuma</td>
+              </tr>
+              <tr>
+                <td>created</td>
+                <td>Veja em que dia eu fui criado.</td>
+                <td>criação - creation</td>
+              </tr>
+              <tr>
+                <td>help</td>
+                <td>Veja meu painel de Ajuda em seu servidor do Discord.</td>
+                <td>ajuda - h</td>
+              </tr>
+              <tr>
+                <td>invite</td>
+                <td>Veja meus links diretamente no Discord.</td>
+                <td>convite - inv</td>
+              </tr>
+              <tr>
+                <td>ping</td>
+                <td>Veja quantos MS de lag eu estou tendo no momento.</td>
+                <td>Nenhuma</td>
+              </tr>
+              <tr>
+                <td>shards</td>
+                <td>Veja as informações das minhas Shards.</td>
+                <td>Nenhuma</td>
+              </tr>
+              <tr>
+                <td>sugestao</td>
+                <td>Envie uma sugestão para meu Servidor para que os membros votem.</td>
+                <td>sugestion - sug - sugestão - sg</td>
+              </tr>
+              <tr>
+                <td>uptime</td>
+                <td>Veja a quanto tempo estou Online sem cair.</td>
+                <td>ut - online - time</td>
+              </tr>
+              <tr>
+                <td>zuraaa</td>
+                <td>Veja informações de quantos votos eu tenho no Site Zuraaa.</td>
+                <td>zura - zuraa - z bot-votos - bot-votes </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <footer>
+        <div class="Fcontainer">
+          <div class="sec aboutus">
+            <h2>Sobre Mim</h2>
+            <p>
+              Sou um Bot desenvolvido em JavaScript usando a biblioteca
+              Discord.JS, meu desenvolvedor é o
+              <strong>zSpl1nterUS_#6455</strong>, caso queira ver as Rede Socias
+              dele ou até mesmo meu repositório no GitHub estarei deixando todos
+              os Links para você ser redirecionado diretamente para os mesmos.
+            </p>
+
+            <ul class="sci">
+              <li>
+                <a href="https://twitter.com/zSpl1nterUS_">
+                  <i class="fab fa-twitter" aria-hidden="true"></i>
+                </a>
+              </li>
+
+              <li>
+                <a href="https://github.com/zSpl1nterUS">
+                  <i class="fab fa-github" aria-hidden="true"></i>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.youtube.com/channel/UCz2V-73WjkV9N6Nwxef9HgA"
+                >
+                  <i class="fab fa-youtube" aria-hidden="true"></i>
+                </a>
+              </li>
+              <li>
+                <a href="https://discord.com/users/600804786492932101">
+                  <i class="fab fa-discord" aria-hidden="true"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="sec quickLinks">
+            <h2>Links</h2>
+            <ul>
+              <li><a href="#">Ajuda</a></li>
+              <li><a href="#">Sobre</a></li>
+              <li><a href="#">Contato</a></li>
+              <!-- <li><a href="#">FAQ</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Help</a></li>
+              <li><a href="#">Terms & Consitions</a></li>
+              <li><a href="#">Contacts</a></li> -->
+            </ul>
+          </div>
+        </div>
+      </footer>
+      <div class="copyrightText">
+        <p>
+          Copyright &copy; 2019 - 2020 Zafriel Company. All Rights Reserved.
+        </p>
+      </div>
+    </div>
+
+    <script src="./src/scripts/fadeOut.js"></script>
+    <script src="./src/scripts/progress.js"></script>
+    <script src="./src/scripts/modal.js"></script>
+  </body>
+</html>

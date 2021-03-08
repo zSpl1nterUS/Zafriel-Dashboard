@@ -1,0 +1,43 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,500;0,600;0,700;1,300;1,500;1,600;1,700&family=Mulish:ital,wght@0,200;0,300;0,400;1,200;1,300;1,400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;1,100;1,200;1,300&display=swap");
+
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css");
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+:root {
+    --font-primary: "Poppins", sans-serif;
+    --font-secundary: "Montserrat", sans-serif;
+    --font-action: "Mulish", sans-serif;
+  }
+
+
+.test, .btts {
+    color: orange;
+    margin-right: 10px;
+    font-family: var(--font-primary);
+    font-size: 20px;
+    text-decoration: none !important;
+    outline: none !important;
+    border: none !important;
+    font-weight: bolder;
+    transition: .3s ease-in-out;
+}
+
+.test:hover {
+    color: white;
+}
+
+.fas {
+    color: orange;
+    padding-right: 3px;
+}
+
+.btts:hover {
+    color: white;
+}

@@ -1,0 +1,309 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(name='viewport', content='width=device-width, initial-scale=1.0')
+  meta(name='description', content='Site Oficial do Bot Zafriel')
+  meta(name='author', content='zSpl1nterUS_#6455')
+  meta(name='keywords', content='Discord Bot, Zafriel')
+  meta(property='og:image', content='https://cdn.discordapp.com/attachments/751976776607203408/811784168811921448/Zafriel_Logo.png')
+  // Fonts
+  link(rel='preconnect', href='https://fonts.gstatic.com')
+  link(href='https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;0,700;1,100;1,400;1,700&display=swap', rel='stylesheet')
+  link(rel='stylesheet', href='https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css', integrity='sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN', crossorigin='anonymous')
+  // CSS import
+  link(rel='stylesheet', type='text/css', href='/css/indext.css')
+  // Favicon
+  link(rel='shortcut icon', href='/img/Logo.png')
+  title Site Oficial &bull; Zafriel
+  script(src='https://kit.fontawesome.com/a076d05399.js', crossorigin='anonymous')
+.loader.hidden
+  .loader
+    .loading
+      span(style='--i: 1')
+      span(style='--i: 2')
+      span(style='--i: 3')
+      span(style='--i: 4')
+      span(style='--i: 5')
+      span(style='--i: 6')
+      span(style='--i: 7')
+      span(style='--i: 8')
+      span(style='--i: 9')
+      span(style='--i: 10')
+      span(style='--i: 11')
+      span(style='--i: 12')
+      span(style='--i: 13')
+      span(style='--i: 14')
+      span(style='--i: 15')
+      span(style='--i: 16')
+      span(style='--i: 17')
+      span(style='--i: 18')
+      span(style='--i: 19')
+      span(style='--i: 20')
+      .rocket
+#progressBar
+#scrollPath
+.container
+  header
+    nav
+      input#check(type='checkbox')
+      label.checkbtn(for='check')
+        i.fas.fa-bars
+      a.logo(href='/')
+        img#avatar(src='/img/Zafriel_Logo.png', alt='avatar')
+        strong#text_logo &#x1F98A; Zafriel &#x1F43E;
+      ul
+        li
+          a.active(href='#', id='') Home
+        li
+          a(href='/commands', id='') Comandos
+        li
+          a(href='https://discord.gg/zX8Fq4V', id='') Suporte
+        li
+          a(href='https://discord.com/oauth2/authorize?client_id=601847636546289664&permissions=20887631278&scope=bot', id='') Meu Convite
+        li
+          a(href='https://zuraaa.com/bots/601847636546289664/', id='') Vote
+        li
+          a(href='#', id='') Sobre
+        li    
+          a(href='/maintenance', id='') Login
+    .img-wrapper
+      img(src='/img/Zafriel_WPP.png', alt='')
+    .banner
+      h1
+        | Um simples Bot para Discord
+        br
+        |             com Multifun&ccedil;&otilde;es
+      p Zafriel
+      a(href='#knowledge')
+        button Saiba Mais
+  section#knowledge.session
+    .session-header
+      h1 Sobre o Bot
+    .areas
+      .works
+        .areas-header
+          i.fab.fa-html5
+          h3 HTML
+        .knowledge-text
+          p Este site que voc&ecirc; est&aacute; navegando agora foi feito em HTML
+      .works
+        .areas-header
+          i.fab.fa-css3-alt
+          h3 CSS
+        .knowledge-text
+          p
+            | E para decorar o site, foi usado CSS, que deixou ele com uma
+            | cara linda n&atilde;o acha?
+      .works
+        .areas-header
+          i.fab.fa-js
+          h3 JavaScript
+        .knowledge-text
+          p
+            | O Zafriel foi desenvolvido 100% na linguagem JavaScript, usando
+            | a biblioteca Discord.JS.
+      .works
+        .areas-header
+          i.fas.fa-pencil-alt
+          h3 Design
+        .knowledge-text
+          p
+            | Todo o meu Design foi feito pelo meu Dono, desde emojis at&eacute; este
+            | site.
+      .works
+        .areas-header
+          i.fab.fa-discord
+          h3 Discord
+        .knowledge-text
+          p
+            | Eu tenho dois servidores no Discord sabia? Caso queira ir at&eacute;
+            | eles vou deixar aqui para voc&ecirc;. 
+            br
+            a(href='https://discord.gg/zX8Fq4V')
+              span.min-buttons Servidor de Suporte
+            br
+            a(href='https://discord.gg/6Yayfhe9NM')
+              span.min-buttons Recanto do Zafriel
+      .works
+        .areas-header
+          i.fab.fa-github
+          h3 GitHub
+        .knowledge-text
+          p
+            | Em Breve todos os meus projetos ser&atilde;o Open Source no GitHub do
+            | meu Dono, tanto o site como a minha aplica&ccedil;&atilde;o, vou deixar o link
+            | aqui em baixo para voc&ecirc;s tamb&eacute;m.
+            br
+            a(href='')
+              span.min-buttons GitHub
+            br
+
+
+      .areas-img-wrapper
+        img(src='/img/Zafriel_Logo.png', alt='Conhecimentos')
+  section#equipe.session-equipe
+    .session-header
+      h1 Equipe
+    .equipe
+      .header
+        .box
+          .photo
+            img(src=client.users.cache.get("600804786492932101").displayAvatarURL({dynamic: true, format: 'jpg', size: 2048}))
+          .name #{client.users.cache.get("600804786492932101").username}
+          .desc_two #{client.users.cache.get("600804786492932101").tag}
+          .desc Dono
+          .sm
+            a.fab.fa-github(href='https://github.com/zSpl1nterUS')
+            a.fab.fa-youtube(href='https://www.youtube.com/channel/UCz2V-73WjkV9N6Nwxef9HgA')
+            a.fab.fa-twitter(href='https://twitter.com/zSpl1nterUS_')
+          a.contact-btn(href='https://discord.com/users/600804786492932101') Contato
+
+      .header    
+        .box
+          .photo
+            img(src=client.users.cache.get("342757511218200588").displayAvatarURL({dynamic: true, format: 'jpg', size: 2048}))
+          .name #{client.users.cache.get("342757511218200588").username}
+          .desc_two #{client.users.cache.get("342757511218200588").tag}
+          .desc Gerente
+          .sm
+            a.fab.fa-github(href='https://github.com/Rickozin')
+            a.fab.fa-youtube(href='https://www.youtube.com/channel/UCz2V-73WjkV9N6Nwxef9HgA')
+            a.fab.fa-twitter(href='https://twitter.com/zSpl1nterUS_')
+          a.contact-btn(href='https://discord.com/users/600804786492932101') Contato
+
+      .header    
+        .box
+          .photo
+            img(src=client.users.cache.get("242355033549701132").displayAvatarURL({dynamic: true, format: 'jpg', size: 2048}))
+          .name #{client.users.cache.get("242355033549701132").username}
+          .desc_two #{client.users.cache.get("242355033549701132").tag}
+          .desc Admin
+          .sm
+            a.fab.fa-github(href='https://github.com/zSpl1nterUS')
+            a.fab.fa-youtube(href='https://www.youtube.com/channel/UCz2V-73WjkV9N6Nwxef9HgA')
+            a.fab.fa-twitter(href='https://twitter.com/zSpl1nterUS_')
+          a.contact-btn(href='https://discord.com/users/600804786492932101') Contato
+
+      .header    
+        .box
+          .photo
+            img(src=client.users.cache.get("574640825003147264").displayAvatarURL({dynamic: true, format: 'jpg', size: 2048}))
+          .name #{client.users.cache.get("574640825003147264").username}
+          .desc_two #{client.users.cache.get("574640825003147264").tag}
+          .desc Admin
+          .sm
+            a.fab.fa-github(href='https://github.com/zSpl1nterUS')
+            a.fab.fa-youtube(href='https://www.youtube.com/channel/UCz2V-73WjkV9N6Nwxef9HgA')
+            a.fab.fa-twitter(href='https://twitter.com/zSpl1nterUS_')
+          a.contact-btn(href='https://discord.com/users/600804786492932101') Contato
+
+      .header    
+        .box
+          .photo
+            img(src=client.users.cache.get("395362584284626975").displayAvatarURL({dynamic: true, format: 'jpg', size: 2048}))
+          .name #{client.users.cache.get("395362584284626975").username}
+          .desc_two #{client.users.cache.get("395362584284626975").tag}
+          .desc Admin
+          .sm
+            a.fab.fa-github(href='https://github.com/zSpl1nterUS')
+            a.fab.fa-youtube(href='https://www.youtube.com/channel/UCz2V-73WjkV9N6Nwxef9HgA')
+            a.fab.fa-twitter(href='https://twitter.com/zSpl1nterUS_')
+          a.contact-btn(href='https://discord.com/users/600804786492932101') Contato
+
+      .header    
+        .box
+          .photo
+            img(src=client.users.cache.get("650428479640174602").displayAvatarURL({dynamic: true, format: 'jpg', size: 2048}))
+          .name #{client.users.cache.get("650428479640174602").username}
+          .desc_two #{client.users.cache.get("650428479640174602").tag}
+          .desc Moderador
+          .sm
+            a.fab.fa-github(href='https://github.com/zSpl1nterUS')
+            a.fab.fa-youtube(href='https://www.youtube.com/channel/UCz2V-73WjkV9N6Nwxef9HgA')
+            a.fab.fa-twitter(href='https://twitter.com/zSpl1nterUS_')
+          a.contact-btn(href='https://discord.com/users/600804786492932101') Contato
+
+      .header    
+        .box
+          .photo
+            img(src=client.users.cache.get("808123969780711424").displayAvatarURL({dynamic: true, format: 'jpg', size: 2048}))
+          .name #{client.users.cache.get("808123969780711424").username}
+          .desc_two #{client.users.cache.get("808123969780711424").tag}
+          .desc Suporte
+          .sm
+            a.fab.fa-github(href='https://github.com/zSpl1nterUS')
+            a.fab.fa-youtube(href='https://www.youtube.com/channel/UCz2V-73WjkV9N6Nwxef9HgA')
+            a.fab.fa-twitter(href='https://twitter.com/zSpl1nterUS_')
+          a.contact-btn(href='https://discord.com/users/600804786492932101') Contato
+
+      .header    
+        .box
+          .photo
+            img(src=client.users.cache.get("302016211221479424").displayAvatarURL({dynamic: true, format: 'jpg', size: 2048}))
+          .name #{client.users.cache.get("302016211221479424").username}
+          .desc_two #{client.users.cache.get("302016211221479424").tag}
+          .desc Suporte
+          .sm
+            a.fab.fa-github(href='https://github.com/zSpl1nterUS')
+            a.fab.fa-youtube(href='https://www.youtube.com/channel/UCz2V-73WjkV9N6Nwxef9HgA')
+            a.fab.fa-twitter(href='https://twitter.com/zSpl1nterUS_')
+          a.contact-btn(href='https://discord.com/users/600804786492932101') Contato
+
+      .header    
+        .box
+          .photo
+            img(src=client.users.cache.get("463029425894588426").displayAvatarURL({dynamic: true, format: 'jpg', size: 2048}))
+          .name #{client.users.cache.get("463029425894588426").username}
+          .desc_two #{client.users.cache.get("463029425894588426").tag}
+          .desc Suporte
+          .sm
+            a.fab.fa-github(href='https://github.com/zSpl1nterUS')
+            a.fab.fa-youtube(href='https://www.youtube.com/channel/UCz2V-73WjkV9N6Nwxef9HgA')
+            a.fab.fa-twitter(href='https://twitter.com/zSpl1nterUS_')
+          a.contact-btn(href='https://discord.com/users/600804786492932101') Contato
+
+
+  footer
+    .Fcontainer
+      .sec.aboutus
+        h2 Sobre Mim
+        p
+          | Sou um Bot desenvolvido em JavaScript usando a biblioteca
+          | Discord.JS, meu desenvolvedor &eacute; o 
+          strong #{client.users.cache.get(process.env.OWNER_ID).tag}
+          | , caso queira ver as Rede Sociais
+          |               dele ou at&eacute; mesmo meu reposit&oacute;rio no GitHub estarei deixando todos
+          |               os Links para voc&ecirc; ser redirecionado diretamente para os mesmos.
+        ul.sci
+          li
+            a(href='https://twitter.com/zSpl1nterUS_')
+              i.fab.fa-twitter(aria-hidden='true')
+          li
+            a(href='https://github.com/zSpl1nterUS')
+              i.fab.fa-github(aria-hidden='true')
+          li
+            a(href='https://www.youtube.com/channel/UCz2V-73WjkV9N6Nwxef9HgA')
+              i.fab.fa-youtube(aria-hidden='true')
+          li
+            a(href='https://discord.com/users/600804786492932101')
+              i.fab.fa-discord(aria-hidden='true')
+      .sec.quickLinks
+        h2 Links
+        ul
+          li
+            a(href='#') Ajuda
+          li
+            a(href='#') Sobre
+          li
+            a(href='#') Contato
+          //
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Help</a></li>
+            <li><a href="#">Terms & Consitions</a></li>
+            <li><a href="#">Contacts</a></li>
+  .copyrightText
+    p
+      | Copyright &copy; 2019 - 2020 Zafriel Company. All Rights Reserved.
+script(src='/scripts/fadeOut.js')
+script(src='/scripts/progress.js')

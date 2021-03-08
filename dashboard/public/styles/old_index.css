@@ -1,0 +1,334 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: #e5e5e5;
+  background-color: #000;
+  background-image: url("../assets/img/Zafriel_WPP.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  overflow-x: hidden;
+
+  font-family: "Poppins", sans-serif;
+}
+
+body,
+input,
+button,
+textarea,
+a {
+  font: 400 20px "Poppins", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  background-color: rgba(0, 0, 0, 0.6);
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header {
+  width: 100vw;
+
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+header #identity {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-left: 34px;
+  margin-top: 18px;
+  margin-bottom: 10px;
+}
+
+.container header #title {
+  font-size: 38px;
+  font-family: "Poppins", sans-serif;
+  color: rgb(255, 166, 0);
+  margin-left: 24px;
+}
+
+.container header #avatar {
+  border-radius: 50%;
+  max-height: 85px;
+  max-width: 85px;
+
+  border: 2px solid rgb(46, 46, 46);
+}
+
+.container header {
+  border-bottom: 2px solid rgb(255, 145, 0);
+  background-color: rgba(32, 32, 32, 0.9);
+}
+
+.container header .header-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.container header button {
+  border: none;
+  outline: none;
+  background-color: rgba(32, 32, 32, 0.733);
+  color: rgb(255, 166, 0);
+  padding: 12px;
+  border-radius: 12px;
+
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+.container header .header-buttons a {
+  margin-top: 24px;
+  margin-right: 34px;
+}
+
+.container header button:hover {
+  background-color: rgb(255, 157, 44);
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.container main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.container main h2 {
+  font-size: 54px;
+  color: rgb(255, 145, 0);
+}
+
+.container main p {
+  margin-top: 64px;
+  font-size: 18px;
+  width: 70%;
+
+  color: rgb(255, 255, 255);
+}
+
+.container main .buttons-container {
+  margin-top: 42px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+
+  width: 45%;
+}
+
+#servers_title {
+  margin-top: 20px;
+  color: rgb(255, 166, 0);
+  border-radius: 2rem;
+  padding: 0.5rem;
+  transition: 0.4s;
+  font-size: 30px;
+}
+
+#servers_title:hover {
+  transition: 0.4s;
+  color: rgb(46, 46, 46);
+  transform: scale(1.05);
+}
+
+#widget {
+  margin-top: 42px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  transition: 0.7s;
+
+  width: 20%;
+}
+
+#test {
+  margin-left: 20px;
+}
+
+#widget:hover {
+  transition: 0.7s;
+}
+
+.container main .buttons-container button {
+  font-weight: bold;
+
+  border: none;
+  outline: none;
+  color: #e5e5e5;
+
+  width: 330px;
+  height: 54px;
+
+  border: 5px solid rgba(0, 0, 0, 0.2);
+  border-radius: 100px;
+
+  cursor: pointer;
+
+  transition: 0.4s;
+}
+
+.container main .buttons-container button:hover {
+  transform: scale(1.1);
+}
+
+.container main .buttons-container #invite-button {
+  background-color: rgb(228, 145, 21);
+  color: rgb(46, 46, 46);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container main .buttons-container #invite-button:hover {
+  background-color: rgba(32, 32, 32, 0.733);
+  color: rgb(255, 166, 0);
+}
+
+.container main .buttons-container #invite-button img {
+  height: 28px;
+  padding-right: 12px;
+}
+
+.container main .buttons-container #support-button img {
+  height: 28px;
+  padding-right: 12px;
+}
+
+.container main .buttons-container #support-button {
+  background-color: rgb(228, 145, 21);
+  color: rgb(46, 46, 46);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container main .buttons-container #support-button:hover {
+  background-color: rgba(32, 32, 32, 0.733);
+  color: rgb(255, 166, 0);
+}
+
+footer p {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 12px;
+  text-align: center;
+}
+
+@media (max-width: 1440px) {
+  .container main .buttons-container button {
+    width: 260px;
+  }
+
+  .container main .buttons-container #support-button img {
+    padding-right: 8px;
+  }
+}
+
+@media (max-width: 1090px) {
+  .container main .buttons-container button {
+    width: 200px;
+  }
+
+  .container main p {
+    width: 60%;
+  }
+}
+
+@media (max-width: 800px) {
+  .container main h2 {
+    font-size: 34px;
+  }
+
+  .container main .buttons-container {
+    flex-direction: column;
+  }
+
+  .container main .buttons-container button {
+    width: 260px;
+
+    margin: 4px;
+  }
+}
+
+@media (max-width: 710px) {
+  .container main h2 {
+    font-size: 28px;
+  }
+
+  .container main p {
+    font-size: 12px;
+
+    width: 66%;
+  }
+}
+
+@media (max-width: 560px) {
+  .container header .header-buttons {
+    flex-direction: column;
+
+    align-items: space-between;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 450px) {
+  header #identity {
+    margin-left: 12px;
+  }
+
+  .container header #title {
+    font-size: 28px;
+  }
+
+  .container header .header-buttons a {
+    margin-right: 12px;
+  }
+
+  .container main p {
+    display: none;
+  }
+
+  .container main h2 {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 360px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 330px) {
+  header #identity {
+    margin-left: 0px;
+  }
+
+  .container header #title {
+    font-size: 22px;
+  }
+
+  .container header .header-buttons a {
+    margin-right: 0px;
+  }
+}
