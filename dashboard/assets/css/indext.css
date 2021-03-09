@@ -29,6 +29,14 @@ html {
   scroll-behavior: smooth;
 }
 
+.invite-top {
+  margin-left: 20px;
+}
+
+.invite-top:hover {
+  border-radius: 90%;
+}
+
 .container header #avatar {
   position: relative;
   border-radius: 50%;
@@ -392,7 +400,7 @@ a.active {
   font-size: 1.2rem;
   text-transform: uppercase;
   letter-spacing: 0.1rem;
-  border-radius: 5px;
+  border-radius: 20px;
   background: #ffffff;
   background: -webkit-linear-gradient(to right, #c78801, #fdc428);
   background: linear-gradient(to left, #c78801, #ebb932);
@@ -401,6 +409,7 @@ a.active {
   cursor: pointer;
   opacity: 0;
   animation: moveBanner 1s 0.9s forwards;
+  transition: 0.5s ease-in-out;
 }
 
 @keyframes moveBanner {
@@ -411,6 +420,11 @@ a.active {
     transform: translateY(0) rotateY(0);
     opacity: 1;
   }
+}
+
+.banner button:hover {
+  color: black;
+  border-radius: 5px;
 }
 
 .areas {
@@ -698,15 +712,16 @@ a.active {
   border-radius: 50%;
   background-size: 200% 200%;
   animation: animated-gradient 2s linear infinite;
+  animation: testa 3s linear infinite alternate-reverse;
 }
 
-.equipe .border {
-  width: 1px;
-  height: 30px;
-  background: #bbb;
-}
-
-@keyframes animated-gradient {
+@keyframes testa {
+  0% {
+    transform: translateY(-10%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
   25% {
     background-position: left botoom;
   }
@@ -719,6 +734,12 @@ a.active {
   100% {
     background-position: left top;
   }
+}
+
+.equipe .border {
+  width: 1px;
+  height: 30px;
+  background: #bbb;
 }
 
 .equipe .photo img {
