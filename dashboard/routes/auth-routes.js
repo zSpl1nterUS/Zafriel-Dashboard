@@ -1,41 +1,51 @@
-const config = require('../../config.json');
-const express = require('express');
-const authClient = require('../modules/auth-client');
-const sessions = require('../modules/sessions');
+const config = require("../../config.json");
+const express = require("express");
+const authClient = require("../modules/auth-client");
+const sessions = require("../modules/sessions");
 
 const router = express.Router();
 
-router.get('/invite', (req, res) =>
-  res.redirect(`https://discord.com/api/oauth2/authorize?client_id=${config.bot.id}&redirect_uri=${config.dashboardURL}/auth-guild&response_type=code&scope=bot`));
+router.get("/invite", (req, res) =>
+  res.redirect(
+    `https://discord.com/api/oauth2/authorize?client_id=${config.bot.id}&redirect_uri=${config.dashboardURL}/auth-guild&response_type=code&scope=bot`
+  )
+);
 
-router.get('/login', (req, res) =>
-  res.redirect(`https://discord.com/api/oauth2/authorize?client_id=${config.bot.id}&redirect_uri=${config.dashboardURL}/auth&response_type=code&scope=identify guilds&prompt=none`));
+router.get("/login", (req, res) =>
+  res.redirect(
+    `https://discordapp.com/api/oauth2/authorize?client_id=${
+      process.env.CLIENT_ID
+    }&redirect_uri=${encodeURIComponent(
+      process.env.REDIRECT_URI
+    )}/auth&response_type=code&scope=identify guilds&prompt=none`
+  )
+);
 
-router.get('/auth-guild', async (req, res) => {
+router.get("/auth-guild", async (req, res) => {
   try {
-    const key = res.cookies.get('key');
+    const key = res.cookies.get("key");
     await sessions.update(key);
   } finally {
-    res.redirect('/dashboard');
+    res.redirect("/dashboard");
   }
 });
 
-router.get('/auth', async (req, res) => {
+router.get("/auth", async (req, res) => {
   try {
     const code = req.query.code;
     const key = await authClient.getAccess(code);
 
-    res.cookies.set('key', key);
-    res.redirect('/dashboard');
+    res.cookies.set("key", key);
+    res.redirect("/dashboard");
   } catch {
-    res.redirect('/');
+    res.redirect("/");
   }
 });
 
-router.get('/logout', (req, res) => {
-  res.cookies.set('key', '');
+router.get("/logout", (req, res) => {
+  res.cookies.set("key", "");
 
-  res.redirect('/');
+  res.redirect("/");
 });
 
 module.exports = router;

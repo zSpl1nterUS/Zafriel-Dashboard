@@ -65,7 +65,15 @@ head
         li
           a(href='#', id='') Sobre
         li    
-          a(href='/maintenance', id='') Login
+        if !user 
+         ul
+          li
+            a(href='/login', class="log", id='') Logar        
+        else 
+          a(href="/dashboard")
+            img.avatar-round(src=user.avatarUrl(32))
+            a(href="/dashboard")
+             span.username #{user.username}
     .img-wrapper
       img(src='/img/Zafriel_WPP.png', alt='')
     .banner
