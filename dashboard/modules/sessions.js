@@ -4,7 +4,7 @@ const bot = require('../../bot');
 const sessions = new Map();
 
 function get(key) {
-  return sessions.get(key) ?? create(key);
+  return sessions.get(key) || create(key);
 }
 
 async function create(key) {
