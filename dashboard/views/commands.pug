@@ -41,8 +41,16 @@ head
           a(href='https://zuraaa.com/bots/601847636546289664/', id='') Vote
         li
           a(href='#', id='') Sobre
-        li  
-          a(href='/maintenance', id='') Login
+        li    
+        if !user 
+         ul
+          li
+            a(href='/maintenance', class="log", id='') Logar        
+        else 
+          a(href="/dashboard")
+            img.avatar-round(src=user.avatarUrl(32))
+            a(href="/dashboard")
+             span.username #{user.username}
 
     .img-wrapper
       img(src='/img/Zafriel_WPP.png', alt='')
@@ -54,8 +62,10 @@ head
         br
         |             a lista dos meus comandos
       p Zafriel
-      a(href='#commands')
-        button Lista
+      a(href='#knowledge')
+        button Saiba Mais
+      a(href ="#" class='invite-top')
+        button Convite do Bot
   section#commands.list-commands
     .session-header
       h1 Comandos

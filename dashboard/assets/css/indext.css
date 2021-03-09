@@ -48,10 +48,10 @@ html {
 
 @keyframes test {
   0% {
-    transform: scale(1.05);
+    transform: translateY(-5%);
   }
   100% {
-    transform: scale(0.8);
+    transform: translateY(0%);
   }
 }
 
@@ -717,7 +717,7 @@ a.active {
 
 @keyframes testa {
   0% {
-    transform: translateY(-10%);
+    transform: translateY(-15%);
   }
   100% {
     transform: translateY(0%);

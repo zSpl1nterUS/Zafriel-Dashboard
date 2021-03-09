@@ -95,8 +95,28 @@ header {
   }
 }
 
+@keyframes zoom {
+  0% {
+    transform: scale(1.4);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes zoom {
+  0% {
+    transform: scale(1.4);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
 nav {
-  background: url("../img/bg-3.png");
+  background: url("/img/bg-3.png");
   background-size: cover;
   height: 90px;
   width: 100%;
@@ -127,17 +147,66 @@ nav ul {
 
 nav ul li {
   display: inline-block;
-  line-height: 80px;
-  margin: 0 5px;
+  margin: 20px 5px;
 }
 
-nav ul li a {
+nav .log {
+  text-transform: none;
+}
+
+.username {
+  color: white;
+  font-size: 18px;
+  position: relative;
+  cursor: pointer;
+  transition: 0.4s ease-in-out;
+}
+
+.username:hover {
+  color: rgb(253, 148, 29);
+}
+
+.avatar-round {
+  width: 50px;
+  height: 50px;
+  position: relative;
+  border-radius: 50px;
+  justify-content: center;
+  bottom: -15px;
+  right: 5px;
+  cursor: pointer;
+}
+
+nav ul li::after {
+  content: "";
+  display: block;
+  width: 0px;
+  height: 2px;
+  background: rgb(255, 164, 60);
+  transition: width 500ms ease-in-out;
+}
+
+nav ul li:hover::after {
+  width: 100%;
+}
+
+nav ul li .log {
+  text-transform: uppercase;
+}
+
+nav ul li a,
+button {
   color: white;
   font-size: 17px;
   padding: 7px 13px;
-  border-radius: 3px;
+  border-radius: 10px;
   text-transform: uppercase;
   transition: 0.5s;
+}
+
+nav ul li a:hover,
+button:hover {
+  border-radius: 3px;
 }
 
 #text_logo {
@@ -147,8 +216,7 @@ nav ul li a {
   color: rgb(255, 166, 0);
 }
 
-a.active,
-a:hover {
+a.active {
   background: #ffa600;
   box-shadow: 0 2px 0 2px rgba(0, 0, 0, 0.9);
 }
@@ -217,6 +285,14 @@ a:hover {
   }
 }
 
+.invite-top {
+  margin-left: 20px;
+}
+
+.invite-top:hover {
+  border-radius: 90%;
+}
+
 .banner {
   position: absolute;
   top: 30%;
@@ -254,7 +330,7 @@ a:hover {
   font-size: 1.2rem;
   text-transform: uppercase;
   letter-spacing: 0.1rem;
-  border-radius: 5px;
+  border-radius: 20px;
   background: #ffffff;
   background: -webkit-linear-gradient(to right, #c78801, #fdc428);
   background: linear-gradient(to left, #c78801, #ebb932);
@@ -263,19 +339,14 @@ a:hover {
   cursor: pointer;
   opacity: 0;
   animation: moveBanner 1s 0.9s forwards;
-  box-shadow: none;
+  transition: 0.5s ease-in-out;
 }
 
 .banner button:hover {
-  background: #1d1d1d;
-  color: rgb(255, 153, 0);
-  transform: translateY(+20%, +20%);
-  box-shadow: 0 2px 0 2px rgba(0, 0, 0, 0.9);
+  color: black;
+  border-radius: 5px;
 }
 
-.banner a:hover {
-  box-shadow: none;
-}
 
 @keyframes moveBanner {
   0% {

@@ -68,7 +68,7 @@ head
         if !user 
          ul
           li
-            a(href='/login', class="log", id='') Logar        
+            a(href='/maintenance', class="log", id='') Logar        
         else 
           a(href="/dashboard")
             img.avatar-round(src=user.avatarUrl(32))
@@ -272,6 +272,18 @@ head
             a.fab.fa-twitter(href='https://twitter.com/zSpl1nterUS_')
           a.contact-btn(href='https://discord.com/users/600804786492932101') Contato
 
+      .header    
+        .box
+          .photo
+            img(src=client.users.cache.get("766382403639443476").displayAvatarURL({dynamic: true, format: 'jpg', size: 2048}))
+          .name #{client.users.cache.get("766382403639443476").username}
+          .desc_two #{client.users.cache.get("766382403639443476").tag}
+          .desc Suporte
+          .sm
+            a.fab.fa-github(href='https://github.com/zSpl1nterUS')
+            a.fab.fa-youtube(href='https://www.youtube.com/channel/UCz2V-73WjkV9N6Nwxef9HgA')
+            a.fab.fa-twitter(href='https://twitter.com/zSpl1nterUS_')
+          a.contact-btn(href='https://discord.com/users/600804786492932101') Contato
 
   footer
     .Fcontainer
